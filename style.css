@@ -1,0 +1,265 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  /* height: 100%;
+  width: 100%; */
+  background-color: #232730;
+  font-family: "Poppins", sans-serif;
+}
+nav {
+  display: flex;
+  color: white;
+
+  font-weight: 400;
+  justify-content: space-between;
+  min-height: 12vh;
+  min-width: auto;
+  align-items: center;
+
+  padding: 3% 12% 0 12%;
+  /* gap: 50%; */
+}
+.navRightSide {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  gap: 2vw;
+  font-size: 1.5em;
+  align-items: center;
+}
+nav i {
+  display: none;
+}
+.websiteName {
+  font-size: 1.7em;
+}
+
+.websiteName:hover,
+.categories:hover,
+.articles:hover,
+nav .about:hover,
+nav i:hover {
+  color: #ff7575;
+}
+.hero {
+  background-color: #232730;
+  width: auto;
+  min-height: 28vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 0;
+  border-bottom: 2px solid #2b2f35;
+}
+.img1 {
+  max-height: 20%;
+  max-width: 18%;
+
+  display: block;
+}
+.img2 {
+  max-height: 100%;
+  max-width: 100%;
+  display: block;
+}
+.content-menu {
+  overflow: hidden;
+
+  justify-content: space-between;
+  font-size: 2em;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+ 
+  padding: 5px 0;
+
+  white-space: nowrap; /* [1] */
+  /* [2] */
+  -webkit-overflow-scrolling: touch; /* [3] */
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* [4] */
+}
+.menu-wrapper {
+  display: flex;
+  overflow-x: auto;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+
+}
+/* .menu-wrapper :last-child{
+  background: linear-gradient(270deg, #232830 0.01%, rgba(35, 40, 48, 0) 87.5%);
+} */
+/* .rectangle {
+  position: absolute;
+  z-index: 1;
+  background: linear-gradient(270deg, #232830 0.01%, rgba(35, 40, 48, 0) 87.5%);
+  right: 0;
+  height: 100%;
+  width: 8%;
+} */
+ a {
+  color: #909090;
+  text-decoration: none;
+}
+.menu-wrapper a:hover {
+  color: #6a6a6a;
+}
+.content {
+  padding: 0 12%;
+  border-bottom: 2px solid #2b2f35;
+}
+
+.menu-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.icons {
+  display: flex;
+  font-size: 1.5em;
+}
+.articles-grid {
+
+  width: 100%;
+ 
+  padding: 100px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+ 
+  gap: 50px 50px;
+}
+.article {
+  
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 25px 25px;
+ align-self: center;
+}
+.article h3 {
+  font-size: 1.4em;
+  padding-top: 6%;
+  font-weight: 600;
+}
+.article h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 3% 0;
+}
+.article img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.article-info {
+  display: flex;
+  width: 100%;
+  justify-content: left;
+  gap: 30px;
+  align-items: center;
+}
+.pagination{
+  
+  padding-bottom: 100px ;
+  
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+  font-size: 1.8em;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color:  #909090;
+  ;
+}
+.pagination span:hover{
+  border-top: 2px solid #ff7575;
+  color: #ff7575;
+}
+footer{
+  color: #ffff;
+  font-size: 1.5em;
+  font-weight: 500;
+  padding: 3% 12% 0 12%;
+
+height: 15vh;
+display: flex;
+justify-content: space-between;
+
+}
+
+@media (max-width: 740px) {
+  nav i {
+    display: initial;
+  }
+  .categories,
+  .articles,
+  .about {
+    display: none;
+  }
+  .content-menu {
+    font-size: 1em;
+  }
+  .articles-grid {
+
+    width: 100%;
+   
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   
+    gap: 30px 30px;
+  }
+  .article h3 {
+    font-size: 1em;
+    padding-top: 6%;
+    font-weight: 600;
+  }
+  .article h4 {
+    font-size: .8rem;
+    font-weight: 400;
+    padding: 3% 0;
+  }
+  .article img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  
+  .article-info {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    gap: 30px;
+    align-items: center;
+  }
+.pagination {
+  font-size: 1.3em;
+  justify-content: space-between;
+
+  
+}
+
+.footer, .footer-left, .footer-right{
+  font-size: 0.7em;
+  
+
+}
+.numbers{
+  display:none ;
+}
+}
